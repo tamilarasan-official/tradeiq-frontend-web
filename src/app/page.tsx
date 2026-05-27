@@ -19,7 +19,8 @@ const events = [
 ];
 
 async function getBackendSnapshot() {
-  const baseUrl = process.env.BACKEND_URL ?? 'http://localhost:4000';
+  const baseUrl =
+    process.env.BACKEND_URL ?? 'https://tradeiq-backend-v0du.onrender.com';
 
   try {
     const [healthResponse, exportResponse] = await Promise.all([
@@ -74,7 +75,10 @@ export default async function Home() {
             <p>STOCK TRADING STUDY</p>
             <h1>Mobile trading and portfolio dashboard</h1>
           </div>
-          <a className="exportButton" href="http://localhost:4000/api/admin/research/export">
+          <a
+            className="exportButton"
+            href="https://tradeiq-backend-v0du.onrender.com/api/admin/research/export"
+          >
             Export CSV
           </a>
         </header>
