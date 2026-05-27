@@ -1,13 +1,13 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0c12;
+  --foreground: #e8eaf0;
+  --surface: #13151f;
+  --surface-2: #1c1f2e;
+  --border: #252836;
+  --muted: #8b8fa8;
+  --buy: #00c28b;
+  --sell: #ff4d4d;
+  --accent: #4f8ef7;
 }
 
 html {
@@ -42,8 +42,8 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button,
+input,
+select {
+  font: inherit;
 }

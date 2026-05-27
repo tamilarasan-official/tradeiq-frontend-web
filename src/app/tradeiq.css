@@ -1,0 +1,238 @@
+.dashboard {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  padding: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.brandMark {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: var(--buy);
+  color: #07100d;
+  font-weight: 800;
+}
+
+.brand span,
+.topbar p,
+.metricCard span,
+.metricCard small,
+.panelHeader span,
+.serviceList span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.brand strong {
+  display: block;
+}
+
+nav {
+  display: grid;
+  gap: 8px;
+}
+
+nav a {
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 12px;
+}
+
+nav a:first-child,
+nav a:hover {
+  background: var(--surface-2);
+  color: var(--foreground);
+}
+
+.workspace {
+  padding: 32px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.topbar p {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.topbar h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: 0;
+}
+
+.exportButton {
+  background: var(--buy);
+  border: 0;
+  border-radius: 8px;
+  color: #07100d;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 12px 18px;
+}
+
+.connectionPanel {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 14px 18px;
+}
+
+.connectionPanel span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.statusDot {
+  background: var(--sell);
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+.statusDot.online {
+  background: var(--buy);
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.metricCard,
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.metricCard {
+  padding: 18px;
+}
+
+.metricCard strong {
+  display: block;
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.metricCard:nth-child(2) strong,
+.metricCard:nth-child(3) strong {
+  color: var(--buy);
+}
+
+.panelGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.wide {
+  grid-row: span 2;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.panelHeader h2 {
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  padding: 14px 10px;
+  text-align: left;
+}
+
+th {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.eventList {
+  display: grid;
+  gap: 10px;
+}
+
+.eventList span,
+.serviceList div {
+  background: var(--surface-2);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.serviceList {
+  display: grid;
+  gap: 10px;
+}
+
+.serviceList strong,
+.serviceList span {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav,
+  .metricGrid,
+  .panelGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
